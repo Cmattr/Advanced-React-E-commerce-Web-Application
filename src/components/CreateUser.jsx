@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import UserContext from '../context/UserContext';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function Register() {
     const { setUser } = useContext(UserContext);
@@ -28,8 +29,9 @@ function Register() {
             return;
         }
 
-        
-        const token = 'dummyToken';
+        // Simulate token generation
+        const token = 'dummyToken'; // In a real application, generate this from the server
+
         const user = {
             name: formData.username,
             isLoggedIn: true,
@@ -55,56 +57,62 @@ function Register() {
     };
 
     return (
-        <div className="register">
-            <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Username:</label>
-                    <input
-                        id="username"
-                        type="text"
-                        name="username"
-                        value={formData.username}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input
-                        id="password"
-                        type="password"
-                        name="password"
-                        value={formData.password}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="confirmPassword">Confirm Password:</label>
-                    <input
-                        id="confirmPassword"
-                        type="password"
-                        name="confirmPassword"
-                        value={formData.confirmPassword}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <button type="submit">Register</button>
-            </form>
-        </div>
+        <Container className="vh-100">
+            <Row className="justify-content-center align-items-center h-100">
+                <Col md={5}>
+                    <h2 className="text-center mb-4">Register</h2>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group controlId="usernameInput" className="mb-3">
+                            <Form.Label>Username</Form.Label>
+                            <Form.Control
+                                type='text'
+                                placeholder='Enter username'
+                                name="username"
+                                value={formData.username}
+                                onChange={handleChange}
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group controlId="emailInput" className="mb-3">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type='email'
+                                placeholder='Enter email'
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group controlId="passwordInput" className="mb-3">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type='password'
+                                placeholder='Enter password'
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group controlId="confirmPasswordInput" className="mb-3">
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control
+                                type='password'
+                                placeholder='Confirm password'
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                required
+                            />
+                        </Form.Group>
+                        <Button variant="primary" type="submit" className="w-100">
+                            Register
+                        </Button>
+                    </Form>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 

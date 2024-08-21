@@ -16,8 +16,9 @@ function HomePage() {
             <p>Your cart has {cartCount} item(s).</p>  {/*display cart count */}
             <NavLink to="/Logout">Logout</NavLink> <br/>
             <NavLink to="/UpdateProfile">Update Profile</NavLink> <br/>
-            <NavLink to="/cart">Your cart has {cartCount} item(s)</NavLink> <br/>
-            <NavLink to="/DeleteAccount">Delete Account</NavLink>
+            <NavLink to="/DeleteAccount">Delete Account</NavLink> <br/>
+            <NavLink to="/AddProduct">Add Product</NavLink> <br/>
+            <NavLink to="/cart">Your cart has {cartCount} item(s)</NavLink> 
             <ProductCatalog/>
         </Container>
     );

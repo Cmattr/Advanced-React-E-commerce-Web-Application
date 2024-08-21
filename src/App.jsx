@@ -29,13 +29,6 @@ function App() {
       const userSession = JSON.parse(storedUser);
       setUser(userSession);
       setToken(storedToken);
-
-      // Navigate based on the stored user type
-      if (userSession.name.toLowerCase() === 'admin') {
-        navigate('/add-product');
-      } else {
-        navigate('/home');
-      }
     }
   }, []);
 
