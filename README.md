@@ -13,6 +13,20 @@ Pages
   - Logout - The Logout function clears the user information from the sessionStorage and returns the user to the homepage.
   - Unit Testing - There are 2 seperate unit test for the AddProduct.jsx file. To run the unit test use the command npm test in the code terminal.
 
+- Installation and Setup
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/cmattr/Advanced-React-E-commerce-Web-Application.git
+    ```
+2. Navigate to the project directory:
+```sh
+  cd Advanced-React-E-commerce-Web-Application
+```
+3. In the terminal Use this code to start the application.
+```sh
+  npm run dev
+```
+
 
 
 
