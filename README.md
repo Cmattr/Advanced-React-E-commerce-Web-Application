@@ -12,6 +12,9 @@ Pages
  Additional Functionalities
   - Logout - The Logout function clears the user information from the sessionStorage and returns the user to the homepage.
   - Unit Testing - There are 2 seperate unit test for the AddProduct.jsx file. To run the unit test use the command npm test in the code terminal.
+  - Continuous Integration workflow - Everytime the code is uploaded to github through the main branch file the ci workflow will be tested and built in the actions tab.
+  - Continuous Deployment - This project includes a deployment stage to vercel in the main.yml file. When the code has a new commit pushed to github, assuming the test pass and the project is able to be   
+    built, the code will then be automatically deployed to Vercel.
 
 - Installation and Setup
 1. Clone the repository:
