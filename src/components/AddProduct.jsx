@@ -23,7 +23,6 @@ const AddProduct = () => {
     const queryClient = useQueryClient();
     const [showSuccessAlert, setShowSucessAlert] = useState(false);
 
-    
     const { mutate, isLoading, isError, error} = useMutation({
         mutationFn: postProduct,
         onSuccess: (data) => {
